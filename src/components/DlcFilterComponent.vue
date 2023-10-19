@@ -58,15 +58,13 @@ export default {
 <style scoped>
 span {
     font-weight: 700;
-    font-style: italic;
     user-select: none;
     cursor: pointer;
 }
 
 div.collapsible {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-ui-background);
     border: 1px solid var(--color-ui-text);
-    color: aliceblue;
 }
 
 ul {

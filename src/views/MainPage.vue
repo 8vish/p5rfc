@@ -193,4 +193,42 @@ input#persona-search {
         margin: 0 0 8px 0;
     }
 }
+
+
+
+
+th a {
+  color: blue; /* Default link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Transition effect for color change */
+}
+
+a:hover,
+th a:hover {
+  color: red; /* Red link color on hover */
+}
+ 
+ th a {
+   color: white;
+ }
+
+th a:link {
+  color: white; /* White link color */
+}
+
+/* Add a fade-in animation on hover */
+a:hover,
+th a:hover {
+  animation: fadeIn 0.3s ease; /* Apply fadeIn animation on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* Fade to opacity 1 */
+  }
+}
+
 </style>

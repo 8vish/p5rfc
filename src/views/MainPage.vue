@@ -123,9 +123,9 @@ export default {
                 <td class="column-affinity centered"
                     v-for="aff in persona.affinities" :key="aff">{{ aff }}</td>
                 <td class="column-fuse">
-                    <router-link class="fusion-redirect" v-if="!persona.treasure"
+                    <router-link class="fusion-redirect fuse" v-if="!persona.treasure"
                         :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }">
-                        Fuse &gt;
+                        Fuse
                     </router-link>
                 </td>
             </tr>
@@ -139,6 +139,11 @@ export default {
 <style scoped>
 .column-stat, .column-affinity {
     display: none;
+}
+
+.fuse {
+    color: aquamarine;
+    font-weight: 800;
 }
 
 input#persona-search {

@@ -142,7 +142,7 @@ export default {
 }
 
 .fuse {
-    color: aquamarine;
+    color: rgb(90, 231, 55);
     font-weight: 800;
 }
 

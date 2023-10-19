@@ -11,12 +11,12 @@ const routes = [
         component: MainPage
     },
     {
-        path: '/persona!:name',
+        path: '/#persona/:name',
         name: 'Persona',
         component: PersonaPage
     },
     {
-        path: '/fusion!:name!:skills?',
+        path: '/#fusion/:name/:skills?',
         name: 'Fusion',
         component: FusionPage
     }

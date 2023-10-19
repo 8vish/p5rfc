@@ -147,9 +147,7 @@ export default {
 }
 
 .name {
-    color: #ff4500;
-    padding: 8px 12px;
-    border-radius: 4px;
+    color: #8e3bee;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;

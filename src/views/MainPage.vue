@@ -75,7 +75,7 @@ export default {
 
 <template>
 
-    <h1 id="page-title">P5R Calculator</h1>
+    <h1 id="page-title">P5R Fusion Calculator</h1>
 
     <input id="persona-search" placeholder="Search for a Persona..." type="text" :value="searchQuery"
         @input="event => searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : ''" />

@@ -76,7 +76,7 @@ export default {
 <template>
 
     <h1 id="page-title">P5R Fusion Calculator</h1>
-
+   <p class="text">The Persona 5 Royal Fusion Calculator simplifies persona fusion, sorting recipes by cost, and helping users efficiently inherit skills, making it a valuable tool for the game.</p>
     <input id="persona-search" placeholder="Search for a Persona..." type="text" :value="searchQuery"
         @input="event => searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : ''" />
     
@@ -146,6 +146,10 @@ export default {
     font-weight: 800;
 }
 
+.text {
+    margin: 15px;
+    font-style: italic
+}
 .name {
     color: #8e3bee;
     text-decoration: none;

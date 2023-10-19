@@ -91,7 +91,7 @@ export default {
                 <th class="column-header column-arcana column-header-sortable"
                     :id="'arcana' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
                     rowspan="2" @click="sort('arcana')">Arcana</th>
-                <th class="column-header column-name column-header-sortable name"
+                <th class="column-header column-name column-header-sortable"
                     :id="'name' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
                     rowspan="2" @click="sort('name')">Name</th>
                 <th class="column-header column-stat" colspan="5">Stats</th>
@@ -114,7 +114,7 @@ export default {
                 <td class="column-level centered">{{ persona.level }}</td>
                 <td class="column-arcana centered">{{ persona.arcana }}</td>
                 <td class="column-name">
-                    <router-link class="persona-redirect"
+                    <router-link class="persona-redirect name"
                         :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }">
                         {{ persona.name }}
                     </router-link>

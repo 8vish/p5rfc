@@ -151,7 +151,7 @@ export default {
     font-style: italic
 }
 .name {
-    color: #8e3bee;
+    color: #e70f62cc;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;

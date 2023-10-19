@@ -147,17 +147,17 @@ export default {
 }
 
 .name {
-    color: #ff4500; /* Orange-Red text color */
-    padding: 8px 12px; /* Add some padding for spacing */
-    border-radius: 4px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the text bold */
-    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+    color: #ff4500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .name:hover {
-    color: #fff; /* White text on hover */
-    background-color: #ff4500; /* Orange-Red background on hover */
+    color: #fff;
+    background-color: #ff4500;
 }
 
 

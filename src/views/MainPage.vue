@@ -8,108 +8,142 @@ import { getLockedDlc, serializeName } from '@/helpers';
 const stripUnblockable = (o: object) => Object.keys(o).filter((_, idx) => idx < 10);
 
 export default {
-    data () {
-        return {
-            searchQuery: '',
+  data() {
+    return {
+      searchQuery: '',
+      sortBy: 'level',
+      sortReverse: false,
+      elements: Element,
+      stripUnblockable,
+      serializeName,
+    };
+  },
+  components: {
+    'dlc-filter': DlcFilter,
+  },
+  computed: {
+    personas(): PersonaData[] {
+      return [...Object.values(Personas)]
+        .sort((a, b) => {
+          if ('name' === this.sortBy)
+            return (this.sortReverse ? b.name : a.name).localeCompare(this.sortReverse ? a.name : b.name);
 
-            sortBy: 'level',
-            sortReverse: false,
+          if (this.sortReverse && 'level' === this.sortBy)
+            return b.level - a.level;
 
-            elements: Element,
+          return a.level - b.level;
+        })
+        .sort((a, b) => {
+          if ('arcana' === this.sortBy) {
+            const aValue = Object.values(Arcana).findIndex(_ => _ === a.arcana);
+            const bValue = Object.values(Arcana).findIndex(_ => _ === b.arcana);
 
-            stripUnblockable,
-            serializeName,
-        }
+            return this.sortReverse ? bValue - aValue : aValue - bValue;
+          }
+
+          return 0;
+        })
+        .filter(persona => {
+          if (getLockedDlc().includes(persona.name))
+            return false;
+
+          if (0 === this.searchQuery.length)
+            return true;
+
+          return persona.name.toLowerCase().includes(this.searchQuery.toLowerCase());
+        });
     },
-    components: {
-        'dlc-filter': DlcFilter,
+  },
+  methods: {
+    sort(sort: string) {
+      if (sort === this.sortBy)
+        this.sortReverse = !this.sortReverse;
+      else {
+        this.sortBy = sort;
+        this.sortReverse = false;
+      }
     },
-    computed: {
-        personas (): PersonaData[] {
-            return [ ...Object.values(Personas) ]
-                .sort((a, b) => {
-                    if ('name' === this.sortBy)
-                        return (this.sortReverse ? b.name : a.name).localeCompare(this.sortReverse ? a.name : b.name);
-
-                    if (this.sortReverse && 'level' === this.sortBy)
-                        return b.level - a.level;
-
-                    return a.level - b.level;
-                })
-                .sort((a, b) => {
-                    if ('arcana' === this.sortBy) {
-                        const aValue = Object.values(Arcana).findIndex(_ => _ === a.arcana);
-                        const bValue = Object.values(Arcana).findIndex(_ => _ === b.arcana);
-
-                        return this.sortReverse ? bValue - aValue : aValue - bValue;
-                    }
-
-                    return 0;
-                })
-                .filter(persona => {
-                    if (getLockedDlc().includes(persona.name))
-                        return false;
-
-                    if (0 === this.searchQuery.length)
-                        return true;
-
-                    return persona.name.toLowerCase().includes(this.searchQuery.toLowerCase());
-                });
-        },
-    },
-    methods: {
-        sort (sort: string) {
-            if (sort === this.sortBy)
-                this.sortReverse = !this.sortReverse;
-            else {
-                this.sortBy = sort;
-                this.sortReverse = false;
-            }
-        },
-    },
-    mounted () {
-        document.title = `Persona List | P5R Calculator`;
-    },
+  },
+  mounted() {
+    document.title = `Persona List | P5R Calculator`;
+  },
 };
 </script>
 
 <template>
+  <div>
+    <h1 id="page-title" class="text-center">Persona 5 Royal Calculator</h1>
 
-    <h1 id="page-title">Persona 5 Royal Calculator</h1>
-
-    <input id="persona-search" placeholder="Search for a Persona..." type="text" :value="searchQuery"
-        @input="event => searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : ''" />
+    <input
+      id="persona-search"
+      class="w-full px-4 py-2 mb-4"
+      placeholder="Search for a Persona..."
+      type="text"
+      :value="searchQuery"
+      @input="(event) => (searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : '')"
+    />
     
     <dlc-filter></dlc-filter>
 
-    <table id="persona-list">
-        <thead>
-            <tr>
-                <th class="column-header column-level column-header-sortable"
-                    :id="'level' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
-                    rowspan="2" @click="sort('level')">Level</th>
-                <th class="column-header column-arcana column-header-sortable"
-                    :id="'arcana' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
-                    rowspan="2" @click="sort('arcana')">Arcana</th>
-                <th class="column-header column-name column-header-sortable"
-                    :id="'name' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
-                    rowspan="2" @click="sort('name')">Name</th>
-                <th class="column-header column-stat" colspan="5">Stats</th>
-                <th class="column-header column-affinity" colspan="10">Affinities</th>
-            </tr>
-            <tr>
-                <th class="column-stat">St</th>
-                <th class="column-stat">Ma</th>
-                <th class="column-stat">En</th>
-                <th class="column-stat">Ag</th>
-                <th class="column-stat">Lu</th>
-                <th class="column-affinity" v-for="element in stripUnblockable(elements)" :key="element">
-                    <img class="element-icon" :src="`assets/icon_${ element.toLowerCase() }.png`" />
-                </th>
-            </tr>
+    <div class="overflow-x-auto">
+      <table id="persona-list" class="w-full border">
+        <thead class="bg-gray-200">
+          <tr>
+            <th
+              class="
+                column-header column-level column-header-sortable
+                sorting-dsc:sortBy === 'level'
+                sorting-asc:sortBy === 'level'
+              "
+              :id="'level' === sortBy ? `sorting-${sortReverse ? 'dsc' : 'asc'}` : ''
+              rowspan="2"
+              @click="sort('level')"
+            >
+              Level
+            </th>
+            <th
+              class="
+                column-header column-arcana column-header-sortable
+                sorting-dsc:sortBy === 'arcana'
+                sorting-asc:sortBy === 'arcana'
+              "
+              :id="'arcana' === sortBy ? `sorting-${sortReverse ? 'dsc' : 'asc'}` : ''
+              rowspan="2"
+              @click="sort('arcana')"
+            >
+              Arcana
+            </th>
+            <th
+              class="
+                column-header column-name column-header-sortable
+                sorting-dsc:sortBy === 'name'
+                sorting-asc:sortBy === 'name'
+              "
+              :id="'name' === sortBy ? `sorting-${sortReverse ? 'dsc' : 'asc'}` : ''
+              rowspan="2"
+              @click="sort('name')"
+            >
+              Name
+            </th>
+            <!-- Hide Stats and Affinities columns on mobile -->
+            <th
+              class="column-stat bg-gray-200 hidden md:table-cell"
+              v-for="stat in ['St', 'Ma', 'En', 'Ag', 'Lu']"
+              :key="stat"
+            >
+              {{ stat }}
+            </th>
+            <th
+              class="column-affinity bg-gray-200 hidden md:table-cell"
+              v-for="element in stripUnblockable(elements)"
+              :key="element"
+            >
+              <img class="element-icon" :src="`assets/icon_${element.toLowerCase()}.png`" />
+            </th>
+          </tr>
         </thead>
         <tbody>
-            <tr v-for="persona in personas" :key="persona.name"
+       <tr v-for="persona in personas" :key="persona.name"
                 :class="{ dlc: persona.dlc, max: persona.max, treasure: persona.treasure }">
                 <td class="column-level centered">{{ persona.level }}</td>
                 <td class="column-arcana centered">{{ persona.arcana }}</td>
@@ -130,8 +164,11 @@ export default {
                 </td>
             </tr>
         </tbody>
-    </table>
+      </table>
+    </div>
+  </div>
 </template>
+
 
 <style>
 </style>

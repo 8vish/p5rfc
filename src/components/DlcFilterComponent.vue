@@ -64,8 +64,9 @@ span {
 }
 
 div.collapsible {
-    background-color: rgb(218, 59, 98);
+    background-color: rgb(255, 255, 255);
     border: 1px solid var(--color-ui-text);
+    color: aliceblue;
 }
 
 ul {

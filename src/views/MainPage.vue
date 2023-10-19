@@ -68,7 +68,7 @@ export default {
         },
     },
     mounted () {
-        document.title = `Persona List | P5R Calculator`;
+        document.title = `Persona 5 Royal Fusion Calculator`;
     },
 };
 </script>

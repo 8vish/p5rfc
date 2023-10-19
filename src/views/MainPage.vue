@@ -91,7 +91,7 @@ export default {
                 <th class="column-header column-arcana column-header-sortable"
                     :id="'arcana' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
                     rowspan="2" @click="sort('arcana')">Arcana</th>
-                <th class="column-header column-name column-header-sortable"
+                <th class="column-header column-name column-header-sortable name"
                     :id="'name' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
                     rowspan="2" @click="sort('name')">Name</th>
                 <th class="column-header column-stat" colspan="5">Stats</th>
@@ -145,6 +145,21 @@ export default {
     color: aquamarine;
     font-weight: 800;
 }
+
+.name {
+    color: #ff4500; /* Orange-Red text color */
+    padding: 8px 12px; /* Add some padding for spacing */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+}
+
+.name:hover {
+    color: #fff; /* White text on hover */
+    background-color: #ff4500; /* Orange-Red background on hover */
+}
+
 
 input#persona-search {
     margin: auto;

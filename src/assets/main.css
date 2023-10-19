@@ -3,7 +3,7 @@
     --color-ui-background-faded: #dcdcdc; /* Slightly darker gray background */
     --color-ui-text: #333333; /* Dark text color */
     --color-ui-text-faded: #666666; /* Lighter text color */
-    --color-ui-header: #222222; /* Dark header color */
+    --color-ui-header: #e6e6e6; /* Soft, light header color */
 
     --color-ui-dlc: #ff0000; /* Red for DLC */
     --color-ui-max: #ffa500; /* Orange for Max */
@@ -25,6 +25,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 
 
 #app {

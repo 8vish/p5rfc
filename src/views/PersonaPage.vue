@@ -60,7 +60,7 @@ export default {
                 <th class="column-header" colspan="5">Stats</th>
                 <th class="column-header desktop-only" colspan="10">Affinities</th>
             </tr>
-            <tr>
+            <tr style="background-color: beige;">
                 <th class="column-stat">St</th>
                 <th class="column-stat">Ma</th>
                 <th class="column-stat">En</th>

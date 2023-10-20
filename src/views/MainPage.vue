@@ -171,7 +171,7 @@ input#persona-search {
 }
 
 @media (min-width: 800px) {
-        table#persona-list {
+      template {
             min-width: 90vh;
         }
     }

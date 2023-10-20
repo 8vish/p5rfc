@@ -102,22 +102,22 @@ export default {
     </table>
 
     <table id="persona-inherits">
-        <thead>
-            <tr>
-                <th class="column-header skill" :colspan="getInheritance(persona).length">
-                    Skill elements that can be inherited:
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="centered column-inherit"
-                    v-for="element in getInheritance(persona)" :key="element">
-                    <img class="element-icon inherit-icon" :src="getElementIcon(element)" />
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <thead>
+        <tr>
+            <th class="column-header" :colspan="getInheritance(persona).length">
+                Skill elements that can be inherited:
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="centered column-inherit" id="element-container">
+                <img class="element-icon inherit-icon" :src="getElementIcon(element)" v-for="element in getInheritance(persona)" :key="element" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 
     <table id="persona-skills">
         <thead>
@@ -229,4 +229,34 @@ table#persona-inherits .skill {
     max-width: 43px;
 }
 }
+
+/* CSS for large screens (more than one line) */
+@media screen and (min-width: 768px) {
+    #element-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .element-icon {
+        width: 100px; /* Adjust as needed to fit your images */
+        height: 100px; /* Adjust as needed to fit your images */
+        margin: 5px; /* Adjust the margin as needed */
+    }
+}
+
+/* CSS for small screens (one line) */
+@media screen and (max-width: 767px) {
+    #element-container {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .element-icon {
+        width: 100px; /* Adjust as needed to fit your images */
+        height: 100px; /* Adjust as needed to fit your images */
+        margin: 5px; /* Adjust the margin as needed */
+    }
+}
+
 </style>

@@ -213,7 +213,7 @@ export default {
 <style scoped>
 
    #fusion-recipes {
-    width: 80%;
+    min-width: 80%;
     max-width: 800px;
    }
 

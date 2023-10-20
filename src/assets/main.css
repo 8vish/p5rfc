@@ -12,14 +12,12 @@
 body {
     background: var(--color-ui-background);
     color: var(--color-ui-text);
-    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-        Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     place-items: center;
-
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -99,87 +97,145 @@ h1#page-title {
     outline: none;
 }
 
+/* Main Component Styles */
+.column-stat, .column-affinity {
+    display: none;
+}
+
+.fuse {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-style: bold;
+}
+
+.text {
+    margin: 15px;
+    font-style: italic;
+}
+
+.name {
+    color: #160707cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.name:hover {
+    color: #fff;
+    background-color: #ff4500;
+}
+
+input#persona-search {
+    margin: auto;
+    min-width: calc(100% - 8px);
+    width: calc(100% - 8px);
+    padding: 4px;
+}
+
+/* Second Element Styles */
+img.inherit-icon {
+    margin: auto;
+}
+
+td.column-skill-element {
+    padding: auto;
+}
+
+/* Third Element Styles */
+span.skill-block {
+    border: 2px solid var(--color-ui-text);
+    cursor: pointer;
+    margin: 3px 0;
+    padding: 4px;
+    user-select: none;
+}
+
+span.skill-block * { cursor: pointer; }
+
+input.skill-block-remove {
+    visibility: hidden;
+}
+
+img.element-fusion-link {
+    cursor: pointer;
+    margin: 0 5px;
+    width: 1.2rem;
+}
+
+div#skill-search {
+    display: inline-flex;
+    min-width: 100%;
+}
+
+input#skill-search-field {
+    flex: auto;
+    padding: 2px;
+}
+
+input#skill-search-add {
+    background-color: var(--color-ui-background);
+    border: 2px solid var(--color-ui-text);
+    color: var(--color-ui-text);
+    font-weight: 700;
+    margin: 2px 4px;
+    padding: 3px;
+}
+
+div#skill-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 2vh 0 0 0;
+    max-width: 100%;
+    width: auto;
+}
+
+.incomplete:not(.max, .treasure) * {
+    color: var(--color-ui-text-faded);
+}
+
+.incomplete.max *, .incomplete.treasure * {
+    color: var(--color-ui-background-faded);
+}
+
+.incomplete td.column-cost {
+    text-decoration: line-through;
+}
+
 @media (max-width: 1023.98px) {
-    .desktop-only {
-        display: none;
-    }
-
-    #app {
-        max-width: 100vw;
-        padding: 1rem;
-    }
-
-    img.element-icon {
-        width: 1.6rem;
-    }
-
     td.column-name {
-        padding: 3px 6px;
-    }
-
-    td.column-fuse {
-        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 900;
     }
 }
 
 @media (min-width: 1024px) {
-    .mobile-only {
-        display: none;
-    }
-
-    #app {
-        max-width: 960px;
-        padding: 2rem;
-    }
-
-    img.element-icon {
-        width: 1.8rem;
-        height: auto;
-        margin: 0 4px;
-        padding: 1px;
-    }
-
-    th.column-stat, td.column-arcana, td.column-name {
-        padding: 3px 6px;
-    }
-
-    td.column-fuse {
-        padding: 3px;
+    td.column-level {
+        padding: 0 3px;
     }
 }
 
 @media (min-width: 1280px) {
-    #app {
-        max-width: 1024px;
+    img.element-fusion-link {
+        width: 1.5rem;
     }
 
-    table {
-        padding: 6px 4px;
+    input#skill-search-add {
+        margin: 2px 5px;
+        padding: 4px;
     }
 
-    img.element-icon {
-        width: 2rem;
+    div#skill-list {
+        gap: 6px;
+        margin: 2vh 0 0 0;
     }
 
-    a.redirect-banner {
-        padding: 6px 4px;
+    span.skill-block {
+        margin: 3px 0;
+        padding: 6px;
     }
 
-    th.column-stat, td.column-arcana, td.column-name {
-        padding: 4px 8px;
-    }
-
-    td.column-arcana {
-        min-width: 90px;
-    }
-
-    td.column-name {
-        min-width: 200px;
-    }
-}
-
-@media (min-width: 800px) {
-    table#fusion-recipes {
-        min-width: 800px;
+    td.column-level {
+        padding: 0 4px;
     }
 }

@@ -142,8 +142,9 @@ export default {
 }
 
 .fuse {
-    color: rgb(153, 137, 212);
+    color: rgb(0, 0, 0);
     font-weight: 800;
+    font-style: bold;
 }
 
 .text {

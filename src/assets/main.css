@@ -7,7 +7,7 @@
     --color-ui-dlc: rgb(182, 79, 79);
     --color-ui-max: rgba(216, 165, 32, 1);
     --color-ui-treasure: rgb(31, 187, 135,);
-    --color-ui-border: rgba(209, 220, 236, 0.808);
+    --color-ui-border: rgba(224, 88, 88, 0.952);
 }
 
 span[data-v-f2c12ba3] {
@@ -18,7 +18,7 @@ span[data-v-f2c12ba3] {
 
 div.collapsible[data-v-f2c12ba3] {
     background-color: var(--color-ui-background);
-    border: 1px solid var(--color-ui-border)
+    border: 1px solid var(--color-ui-text)
 }
 
 ul[data-v-f2c12ba3] {

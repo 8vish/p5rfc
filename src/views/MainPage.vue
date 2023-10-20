@@ -122,7 +122,7 @@ export default {
                 <td class="column-fuse">
                     <router-link class="fusion-redirect" v-if="!persona.treasure"
                         :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }" style="color: rgb(223, 142, 35);">
-                        Fuse
+                        Fuse>
                     </router-link>
                 </td>
             </tr>

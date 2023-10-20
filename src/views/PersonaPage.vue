@@ -101,27 +101,23 @@ export default {
         </tbody>
     </table>
 
-
-
     <table id="persona-inherits">
-    <thead>
-        <tr>
-            <th class="column-header" :colspan="getInheritance(persona).length">
-                Skill elements that can be inherited:
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="centered column-inherit" id="element-container">
-                <img class="element-icon inherit-icon" :src="getElementIcon(element)" v-for="element in getInheritance(persona)" :key="element" />
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
-
+        <thead>
+            <tr>
+                <th class="column-header" :colspan="getInheritance(persona).length">
+                    Skill elements that can be inherited:
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="display: flex; flex-wrap: wrap; margin: 5px;">
+                <td class="centered column-inherit"
+                    v-for="element in getInheritance(persona)" :key="element">
+                    <img class="element-icon inherit-icon" :src="getElementIcon(element)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <table id="persona-skills">
         <thead>
@@ -214,44 +210,4 @@ td.column-skill-element {
         padding: 3px 6px;
     }
 }
-
-
-@media (max-width: 1023.98px) {
-
-table#persona-inherits {
-    display: block;
-}
-
-table#persona-inherits .column-header {
-    display: none;
-}
-
-table#persona-inherits .skill {
-    display: inline-block;
-    text-align: center;
-    margin: 5px;
-    max-width: 43px;
-}
-}
-
-#element-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.element-icon {
-    max-width: 45px; /* Set the width to the size of your images */
-    max-height: 33px; /* Set the height to the size of your images */
-    margin: auto; /* Adjust the margin as needed */
-    box-sizing: border-box; /* Ensure the margin doesn't exceed the container's width */
-}
-
-/* CSS for small screens (e.g., mobile) */
-@media screen and (max-width: 767px) {
-    .element-icon {
-        width: calc(33.33% - 10px); /* 33.33% to show 3 images per line, adjust as needed */
-    }
-}
-
-
 </style>

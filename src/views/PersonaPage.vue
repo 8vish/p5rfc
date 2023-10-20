@@ -211,8 +211,8 @@ td.column-skill-element {
     }
 }
 
- /* Mobile Styles */
- @media (max-width: 1023.98px) {
+  /* Mobile Styles */
+  @media (max-width: 1023.98px) {
     /* Persona Inherits Table */
     table#persona-inherits {
       display: block;
@@ -221,9 +221,10 @@ td.column-skill-element {
       display: none;
     }
     table#persona-inherits .skill {
-      display: block;
+      display: inline-block;
       text-align: center;
-      margin: 10px auto; /* Add margin for spacing between rows */
+      margin: 5px; /* Add margin for spacing between images */
+      max-width: 43px; /* Set a max width for each image */
     }
   }
 </style>

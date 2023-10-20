@@ -111,7 +111,7 @@ export default {
                 :class="{ dlc: persona.dlc, max: persona.max, treasure: persona.treasure }">
                 <td class="column-level centered">{{ persona.level }}</td>
                 <td class="column-arcana centered">{{ persona.arcana }}</td>
-                <td class="column-name" style="width: 100%; color: rgb(0, 0, 0); border-radius: 2px; background-color: cyan;">
+                <td class="column-name">
                     <router-link class="persona-redirect"
                         :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }">
                         {{ persona.name }}
@@ -121,7 +121,7 @@ export default {
                 <td class="column-affinity centered" v-for="aff in persona.affinities" :key="aff">{{ aff }}</td>
                 <td class="column-fuse">
                     <router-link class="fusion-redirect" v-if="!persona.treasure"
-                        :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }" style="background-color: rgb(43, 86, 226); border-radius: 2px;">
+                        :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }">
                         Fuse&gt;
                     </router-link>
                 </td>

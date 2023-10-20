@@ -160,54 +160,131 @@ export default {
 </template>
 
 <style scoped>
-img.inherit-icon {
-    margin: auto;
-}
+  /* General Styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  a {
+    color: #0078d4;
+    text-decoration: none;
+  }
 
-td.column-skill-element {
-    padding: auto;
-}
+  /* Page Title */
+  #page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
 
-@media (min-width: 1280px) {
+  /* Redirect Banner */
+  .centered {
+    text-align: center;
+  }
+  .redirect-banner {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .redirect-banner:hover {
+    background-color: #005a9e;
+  }
 
-    tr.row-skill {
-        height: 36px;
-    }
+  /* Skill Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
 
-    td.column-skill-element {
-        min-height: 36px;
-    }
+  /* Skills Table Header */
+  .column-header {
+    font-weight: bold;
+    background-color: #0078d4;
+    color: #fff;
+  }
 
-    td.column-skill-name, td.column-skill-effect {
-        padding: 4px 8px;
-    }
-}
+  /* Stats Table Header */
+  .column-stat {
+    background-color: #0078d4;
+    color: #fff;
+  }
 
-@media (min-width: 1024px) {
-    tr.row-skill {
-        height: 32px;
-    }
+  /* Affinities Table Header */
+  .column-affinity {
+    background-color: #0078d4;
+    color: #fff;
+  }
 
-    td.column-skill-element {
-        min-height: 32px;
-    }
+  /* Skill Elements Icons */
+  .element-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+  }
 
-    td.column-skill-name, td.column-skill-effect {
-        padding: 3px 6px;
-    }
-}
+  /* Skill Level, Element, Name, Effect, Unique */
+  .column-skill-level,
+  .column-skill-element,
+  .column-skill-name,
+  .column-skill-effect,
+  .column-skill-unique {
+    text-align: center;
+  }
 
-@media (max-width: 1023.98px) {
-    table#persona-stats {
-        margin: 2vh 0 0 0!important;
-    }
+  .row-skill:nth-child(odd) {
+    background-color: #e1e1e1;
+  }
 
+  /* Mobile-only Styles */
+  @media (max-width: 1023.98px) {
+    /* Affinities Table */
     table#persona-affinities {
-        margin: 0 0 2vh 0!important;
+      display: block;
+    }
+    table#persona-affinities .column-header {
+      display: none;
+    }
+    table#persona-affinities .column-affinity {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
     }
 
-    td.column-skill-name, td.column-skill-effect {
-        padding: 3px 6px;
+    /* Skills Table */
+    table#persona-skills .column-skill-element {
+      display: none;
     }
-}
+  }
+
+  /* Custom Styles */
+  /* Adjust these colors to your preference */
+  .dlc {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  .max {
+    background-color: #f1c40f;
+    color: #000;
+  }
+  .treasure {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  /* Inheritance Elements Icons */
+  .inherit-icon {
+    width: 32px;
+  }
 </style>

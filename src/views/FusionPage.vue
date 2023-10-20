@@ -308,4 +308,10 @@ export default {
             padding: 0 4px;
         }
     }
+
+    @media (min-width: 800px) {
+        table#fusion-recipes {
+            min-width: 800px;
+        }
+    }
 </style>

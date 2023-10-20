@@ -242,6 +242,7 @@ table#persona-inherits .skill {
 .element-icon {
   gap: 5px;
   margin: 5px;
+  border: 1px solid var(--color-ui-border);
 }
 
 

@@ -5,9 +5,9 @@
     --color-ui-text-faded: rgba(26, 7, 7, 0.9);
     --color-ui-header: rgb(60, 24, 219);
 
-    --color-ui-dlc: rgba(129, 0, 0, 1);
+    --color-ui-dlc: rgb(182, 79, 79);
     --color-ui-max: rgba(216, 165, 32, 1);
-    --color-ui-treasure: rgba(127, 255, 212, 1);
+    --color-ui-treasure: rgb(31, 187, 135);
 }
 
 body {

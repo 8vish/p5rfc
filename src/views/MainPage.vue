@@ -135,3 +135,64 @@ export default {
 
 <style>
 </style>
+
+<style scoped>
+.column-stat, .column-affinity {
+    display: none;
+}
+
+.fuse {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-style: bold;
+}
+
+.text {
+    margin: 15px;
+    font-style: italic
+}
+.name {
+    color: #160707cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.name:hover {
+    color: #fff;
+    background-color: #ff4500;
+}
+
+
+input#persona-search {
+    margin: auto;
+    min-width: calc(100% - 8px);
+    width: calc(100% - 8px);
+    padding: 4px;
+}
+
+@media (min-width: 1280px) {
+    input#persona-search {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    td.column-fuse {
+        min-width: 50px;
+    }
+
+    .column-stat, .column-affinity {
+        display: table-cell!important;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    input#persona-search {
+        margin: 0 0 8px 0;
+    }
+}
+
+</style>

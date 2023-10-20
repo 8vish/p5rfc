@@ -75,7 +75,7 @@ a, a:hover, a:visited {
     color: inherit;
     cursor: pointer;
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: solid;
 }
 
 a.redirect-banner {

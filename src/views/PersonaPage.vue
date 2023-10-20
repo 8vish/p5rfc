@@ -211,9 +211,19 @@ td.column-skill-element {
     }
 }
 
-
-.skill img {
-    min-width: 25px;
-    max-width: 40px;
-}
+ /* Mobile Styles */
+ @media (max-width: 1023.98px) {
+    /* Persona Inherits Table */
+    table#persona-inherits {
+      display: block;
+    }
+    table#persona-inherits .column-header {
+      display: none;
+    }
+    table#persona-inherits .skill {
+      display: block;
+      text-align: center;
+      margin: 10px auto; /* Add margin for spacing between rows */
+    }
+  }
 </style>

@@ -417,7 +417,7 @@ thead {
 .treasure,
 .treasure * {
     background-color: var(--color-ui-treasure);
-    color: var(--color-ui-background)
+    color: var(--color-ui-text)
 }
 
 .centered {

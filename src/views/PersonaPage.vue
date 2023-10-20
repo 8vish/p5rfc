@@ -111,7 +111,7 @@ export default {
         </thead>
         <tbody>
             <tr>
-                <td class="centered column-inherit skill"
+                <td class="centered column-inherit"
                     v-for="element in getInheritance(persona)" :key="element">
                     <img class="element-icon inherit-icon" :src="getElementIcon(element)" />
                 </td>
@@ -158,3 +158,56 @@ export default {
         Fuse &gt;&gt;
     </router-link>
 </template>
+
+<style scoped>
+img.inherit-icon {
+    margin: auto;
+}
+
+td.column-skill-element {
+    padding: auto;
+}
+
+@media (min-width: 1280px) {
+
+    tr.row-skill {
+        height: 36px;
+    }
+
+    td.column-skill-element {
+        min-height: 36px;
+    }
+
+    td.column-skill-name, td.column-skill-effect {
+        padding: 4px 8px;
+    }
+}
+
+@media (min-width: 1024px) {
+    tr.row-skill {
+        height: 32px;
+    }
+
+    td.column-skill-element {
+        min-height: 32px;
+    }
+
+    td.column-skill-name, td.column-skill-effect {
+        padding: 3px 6px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    table#persona-stats {
+        margin: 2vh 0 0 0!important;
+    }
+
+    table#persona-affinities {
+        margin: 0 0 2vh 0!important;
+    }
+
+    td.column-skill-name, td.column-skill-effect {
+        padding: 3px 6px;
+    }
+}
+</style>

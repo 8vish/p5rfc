@@ -68,15 +68,15 @@ export default {
         },
     },
     mounted () {
-        document.title = `Persona 5 Royal Fusion Calculator | P5RFC`;
+        document.title = `Persona List | P5R Calculator`;
     },
 };
 </script>
 
 <template>
 
-    <h1 id="page-title">P5R Fusion Calculator</h1>
-   <p class="text">The Persona 5 Royal Fusion Calculator simplifies persona fusion, sorting recipes by cost, and helping users efficiently inherit skills, making it a valuable tool for the game.</p>
+    <h1 id="page-title">P5R Calculator</h1>
+
     <input id="persona-search" placeholder="Search for a Persona..." type="text" :value="searchQuery"
         @input="event => searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : ''" />
     
@@ -114,7 +114,7 @@ export default {
                 <td class="column-level centered">{{ persona.level }}</td>
                 <td class="column-arcana centered">{{ persona.arcana }}</td>
                 <td class="column-name">
-                    <router-link class="persona-redirect name"
+                    <router-link class="persona-redirect"
                         :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }">
                         {{ persona.name }}
                     </router-link>
@@ -123,9 +123,9 @@ export default {
                 <td class="column-affinity centered"
                     v-for="aff in persona.affinities" :key="aff">{{ aff }}</td>
                 <td class="column-fuse">
-                    <router-link class="fusion-redirect fuse" v-if="!persona.treasure"
+                    <router-link class="fusion-redirect" v-if="!persona.treasure"
                         :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }">
-                        Fuse&#11157;
+                        Fuse &gt;
                     </router-link>
                 </td>
             </tr>
@@ -133,3 +133,42 @@ export default {
     </table>
 </template>
 
+<style>
+</style>
+
+<style scoped>
+.column-stat, .column-affinity {
+    display: none;
+}
+
+input#persona-search {
+    margin: auto;
+    min-width: calc(100% - 8px);
+    width: calc(100% - 8px);
+    padding: 4px;
+}
+
+@media (min-width: 1280px) {
+    input#persona-search {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    td.column-fuse {
+        min-width: 50px;
+    }
+
+    .column-stat, .column-affinity {
+        display: table-cell!important;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    input#persona-search {
+        margin: 0 0 8px 0;
+    }
+}
+</style>

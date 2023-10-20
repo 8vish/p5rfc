@@ -209,3 +209,103 @@ export default {
         </tbody>
     </table>
 </template>
+
+<style scoped>
+
+    span.skill-block {
+        border: 2px solid var(--color-ui-text);
+        cursor: pointer;
+        margin: 3px 0;
+        padding: 4px;
+        user-select: none;
+    }
+    span.skill-block * { cursor: pointer; }
+
+    input.skill-block-remove {
+        visibility: hidden;
+    }
+
+    img.element-fusion-link {
+        cursor: pointer;
+        margin: 0 5px;
+        width: 1.2rem;
+    }
+
+    div#skill-search {
+        display: inline-flex;
+        min-width: 100%;
+    }
+
+    input#skill-search-field {
+        flex: auto;
+        padding: 2px;
+    }
+
+    input#skill-search-add {
+        background-color: var(--color-ui-background);
+        border: 2px solid var(--color-ui-text);
+        color: var(--color-ui-text);
+        font-weight: 700;
+        margin: 2px 4px;
+        padding: 3px;
+    }
+        
+    div#skill-list {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin: 2vh 0 0 0;
+        max-width: 100%;
+        width: auto;
+    }
+
+    .incomplete:not(.max, .treasure) * {
+        color: var(--color-ui-text-faded);
+    }
+
+    .incomplete.max *, .incomplete.treasure * {
+        color: var(--color-ui-background-faded);
+    }
+
+    .incomplete td.column-cost {
+        text-decoration: line-through;
+    }
+
+    @media (max-width: 1023.98px) {
+        td.column-name {
+            font-size: 1.1rem;
+            font-weight: 900;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        td.column-level {
+            padding: 0 3px;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        img.element-fusion-link {
+            width: 1.5rem;
+        }
+
+        input#skill-search-add {
+            margin: 2px 5px;
+            padding: 4px;
+        }
+        
+        div#skill-list {
+            gap: 6px;
+            margin: 2vh 0 0 0;
+        }
+
+        span.skill-block {
+            margin: 3px 0;
+            padding: 6px;
+        }
+
+        td.column-level {
+            padding: 0 4px;
+        }
+    }
+</style>

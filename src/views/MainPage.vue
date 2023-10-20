@@ -113,7 +113,7 @@ export default {
                 <td class="column-arcana centered">{{ persona.arcana }}</td>
                 <td class="column-name">
                     <router-link class="persona-redirect"
-                        :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }">
+                        :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }" style="color: blue;">
                         {{ persona.name }}
                     </router-link>
                 </td>

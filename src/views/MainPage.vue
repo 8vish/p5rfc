@@ -113,16 +113,16 @@ export default {
                 <td class="column-arcana centered">{{ persona.arcana }}</td>
                 <td class="column-name">
                     <router-link class="persona-redirect"
-                        :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }" style="color: blue;">
-                        {{ persona.name }}&#128279;
+                        :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }" style="color: rgb(228, 208, 35);">
+                        {{ persona.name }}
                     </router-link>
                 </td>
                 <td class="column-stat centered" v-for="stat in persona.stats" :key="stat">{{ stat }}</td>
                 <td class="column-affinity centered" v-for="aff in persona.affinities" :key="aff">{{ aff }}</td>
                 <td class="column-fuse">
                     <router-link class="fusion-redirect" v-if="!persona.treasure"
-                        :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }" style="color: blue;">
-                        Fuse&#128279;
+                        :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }" style="color: rgb(223, 210, 35);">
+                        Fuse
                     </router-link>
                 </td>
             </tr>

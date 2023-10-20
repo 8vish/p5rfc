@@ -239,11 +239,5 @@ table#persona-inherits .skill {
     flex-wrap: wrap;
 }
 
-.element-icon {
-  gap: 5px;
-  margin: 5px;
-  border: 1px solid var(--color-ui-border);
-}
-
 
 </style>

@@ -212,7 +212,7 @@ td.column-skill-element {
 }
 
 .skill {
-    display: block;
+    display: inline-block;
     display: flex;
     flex-wrap: wrap;
 }

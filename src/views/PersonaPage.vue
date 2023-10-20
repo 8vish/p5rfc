@@ -239,11 +239,4 @@ table#persona-inherits .skill {
     flex-wrap: wrap;
 }
 
-.element-icon {
-    width: 45px; /* Set the width to the size of your images */
-    height: 33px; /* Set the height to the size of your images */
-    margin: 5px; /* Adjust the margin as needed */
-    box-sizing: border-box; /* Ensure the margin doesn't exceed the container's width */
-}
-
 </style>

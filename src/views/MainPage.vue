@@ -133,8 +133,6 @@ export default {
     </table>
 </template>
 
-<style>
-</style>
 
 <style scoped>
 .column-stat, .column-affinity {
@@ -171,4 +169,4 @@ input#persona-search {
         margin: 0 0 8px 0;
     }
 }
-</style>
+</styl>

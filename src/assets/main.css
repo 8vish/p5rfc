@@ -2,7 +2,6 @@
     --color-ui-background: rgba(24, 24, 24, 1);
     --color-ui-background-faded: rgba(24, 24, 24, .7);
     --color-ui-text: rgba(205, 205, 205, 1);
-    --color-ui-text-faded: rgba(135, 135, 135, .9);
     --color-ui-header: rgba(225, 225, 225, 1);
     --color-ui-dlc: rgba(129, 0, 0, 1);
     --color-ui-max: rgba(216, 165, 32, 1);
@@ -103,7 +102,6 @@ h1#page-title {
 }
 
 .fuse {
-    color: rgb(0, 0, 0);
     font-weight: 800;
     font-style: bold;
 }
@@ -150,7 +148,9 @@ span.skill-block {
     user-select: none;
 }
 
-span.skill-block * { cursor: pointer; }
+span.skill-block * {
+    cursor: pointer;
+}
 
 input.skill-block-remove {
     visibility: hidden;
@@ -200,42 +200,4 @@ div#skill-list {
 
 .incomplete td.column-cost {
     text-decoration: line-through;
-}
-
-@media (max-width: 1023.98px) {
-    td.column-name {
-        font-size: 1.1rem;
-        font-weight: 900;
-    }
-}
-
-@media (min-width: 1024px) {
-    td.column-level {
-        padding: 0 3px;
-    }
-}
-
-@media (min-width: 1280px) {
-    img.element-fusion-link {
-        width: 1.5rem;
-    }
-
-    input#skill-search-add {
-        margin: 2px 5px;
-        padding: 4px;
-    }
-
-    div#skill-list {
-        gap: 6px;
-        margin: 2vh 0 0 0;
-    }
-
-    span.skill-block {
-        margin: 3px 0;
-        padding: 6px;
-    }
-
-    td.column-level {
-        padding: 0 4px;
-    }
 }

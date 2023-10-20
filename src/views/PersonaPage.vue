@@ -112,7 +112,7 @@ export default {
         <tbody>
             <tr>
                 <td class="centered column-inherit"
-                    v-for="element in getInheritance(persona)" :key="element">
+                    v-for="element in getInheritance(persona)" :key="element" style="display: flex; flex-wrap: wrap">
                     <img class="element-icon inherit-icon" :src="getElementIcon(element)" />
                 </td>
             </tr>
@@ -152,12 +152,12 @@ export default {
             </tr>
         </tbody>
     </table>
-
     <router-link class="centered fuse-redirect redirect-banner" v-if="!persona.treasure"
         :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }">
         Fuse&gt;&gt;
     </router-link>
 </template>
+
 
 <style scoped>
 img.inherit-icon {

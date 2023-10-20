@@ -212,6 +212,11 @@ export default {
 
 <style scoped>
 
+   #fusion-recipes {
+    width: 80%;
+    max-width: 800px;
+   }
+
     span.skill-block {
         border: 2px solid var(--color-ui-text);
         cursor: pointer;

@@ -104,7 +104,7 @@ export default {
     <table id="persona-inherits">
         <thead>
             <tr>
-                <th class="column-header" :colspan="getInheritance(persona).length">
+                <th class="column-header skill" :colspan="getInheritance(persona).length">
                     Skill elements that can be inherited:
                 </th>
             </tr>
@@ -209,5 +209,24 @@ td.column-skill-element {
     td.column-skill-name, td.column-skill-effect {
         padding: 3px 6px;
     }
+}
+
+
+@media (max-width: 1023.98px) {
+
+table#persona-inherits {
+    display: block;
+}
+
+table#persona-inherits .column-header {
+    display: none;
+}
+
+table#persona-inherits .skill {
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+    max-width: 43px;
+}
 }
 </style>

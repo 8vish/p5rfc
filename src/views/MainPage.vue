@@ -8,7 +8,7 @@ import { getLockedDlc, serializeName } from '@/helpers';
 const stripUnblockable = (o: object) => Object.keys(o).filter((_, idx) => idx < 10);
 
 export default {
-    data () {
+    data() {
         return {
             searchQuery: '',
 
@@ -25,8 +25,8 @@ export default {
         'dlc-filter': DlcFilter,
     },
     computed: {
-        personas (): PersonaData[] {
-            return [ ...Object.values(Personas) ]
+        personas(): PersonaData[] {
+            return [...Object.values(Personas)]
                 .sort((a, b) => {
                     if ('name' === this.sortBy)
                         return (this.sortReverse ? b.name : a.name).localeCompare(this.sortReverse ? a.name : b.name);
@@ -58,7 +58,7 @@ export default {
         },
     },
     methods: {
-        sort (sort: string) {
+        sort(sort: string) {
             if (sort === this.sortBy)
                 this.sortReverse = !this.sortReverse;
             else {
@@ -67,32 +67,31 @@ export default {
             }
         },
     },
-    mounted () {
+    mounted() {
         document.title = `Persona 5 Royal Fusion Calculator| P5RFC`;
     },
 };
 </script>
 
 <template>
-
     <h1 id="page-title">P5R Fusion Calculator</h1>
     <input id="persona-search" placeholder="Search for a Persona..." type="text" :value="searchQuery"
         @input="event => searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : ''" />
-    
+
     <dlc-filter></dlc-filter>
 
     <table id="persona-list">
         <thead>
             <tr>
                 <th class="column-header column-level column-header-sortable"
-                    :id="'level' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
-                    rowspan="2" @click="sort('level')">Level</th>
+                    :id="'level' === sortBy ? `sorting-${sortReverse ? 'dsc' : 'asc'}` : ''" rowspan="2"
+                    @click="sort('level')">Level</th>
                 <th class="column-header column-arcana column-header-sortable"
-                    :id="'arcana' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
-                    rowspan="2" @click="sort('arcana')">Arcana</th>
+                    :id="'arcana' === sortBy ? `sorting-${sortReverse ? 'dsc' : 'asc'}` : ''" rowspan="2"
+                    @click="sort('arcana')">Arcana</th>
                 <th class="column-header column-name column-header-sortable"
-                    :id="'name' === sortBy ? `sorting-${ sortReverse ? 'dsc' : 'asc' }` : ''"
-                    rowspan="2" @click="sort('name')">Name</th>
+                    :id="'name' === sortBy ? `sorting-${sortReverse ? 'dsc' : 'asc'}` : ''" rowspan="2"
+                    @click="sort('name')">Name</th>
                 <th class="column-header column-stat" colspan="5">Stats</th>
                 <th class="column-header column-affinity" colspan="10">Affinities</th>
             </tr>
@@ -103,7 +102,7 @@ export default {
                 <th class="column-stat">Ag</th>
                 <th class="column-stat">Lu</th>
                 <th class="column-affinity" v-for="element in stripUnblockable(elements)" :key="element">
-                    <img class="element-icon" :src="`assets/icon_${ element.toLowerCase() }.png`" />
+                    <img class="element-icon" :src="`assets/icon_${element.toLowerCase()}.png`" />
                 </th>
             </tr>
         </thead>
@@ -119,8 +118,7 @@ export default {
                     </router-link>
                 </td>
                 <td class="column-stat centered" v-for="stat in persona.stats" :key="stat">{{ stat }}</td>
-                <td class="column-affinity centered"
-                    v-for="aff in persona.affinities" :key="aff">{{ aff }}</td>
+                <td class="column-affinity centered" v-for="aff in persona.affinities" :key="aff">{{ aff }}</td>
                 <td class="column-fuse">
                     <router-link class="fusion-redirect" v-if="!persona.treasure"
                         :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }">
@@ -132,11 +130,11 @@ export default {
     </table>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <style scoped>
-.column-stat, .column-affinity {
+.column-stat,
+.column-affinity {
     display: none;
 }
 
@@ -160,8 +158,9 @@ input#persona-search {
         min-width: 50px;
     }
 
-    .column-stat, .column-affinity {
-        display: table-cell!important;
+    .column-stat,
+    .column-affinity {
+        display: table-cell !important;
     }
 }
 

@@ -239,5 +239,19 @@ table#persona-inherits .skill {
     flex-wrap: wrap;
 }
 
+.element-icon {
+    max-width: 45px; /* Set the width to the size of your images */
+    max-height: 33px; /* Set the height to the size of your images */
+    margin: auto; /* Adjust the margin as needed */
+    box-sizing: border-box; /* Ensure the margin doesn't exceed the container's width */
+}
+
+/* CSS for small screens (e.g., mobile) */
+@media screen and (max-width: 767px) {
+    .element-icon {
+        width: calc(33.33% - 10px); /* 33.33% to show 3 images per line, adjust as needed */
+    }
+}
+
 
 </style>

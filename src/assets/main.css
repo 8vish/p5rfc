@@ -18,7 +18,7 @@ span[data-v-f2c12ba3] {
 
 div.collapsible[data-v-f2c12ba3] {
     background-color: var(--color-ui-background);
-    border: 1px solid var(--color-ui-text)
+    border: 1px solid var(--color-ui-border)
 }
 
 ul[data-v-f2c12ba3] {
@@ -261,7 +261,7 @@ td.column-skill-element[data-v-265bb245] {
 }
 
 span.skill-block {
-    border: 1px solid var(--color-ui-text);
+    border: 1px solid var(--color-ui-border);
     cursor: pointer;
     margin: 3px 0;
     padding: 4px;
@@ -294,7 +294,7 @@ input#skill-search-field {
 
 input#skill-search-add {
     background-color: var(--color-ui-background);
-    border: 1px solid var(--color-ui-text);
+    border: 1px solid var(--color-ui-border);
     color: var(--color-ui-text);
     font-weight: 700;
     margin: 2px 4px;
@@ -380,7 +380,7 @@ body {
 }
 
 table {
-    border: 1px solid var(--color-ui-text);
+    border: 1px solid var(--color-ui-border);
     border-collapse: collapse;
     margin: 2vh auto;
     max-width: 100%;
@@ -390,7 +390,7 @@ table {
 
 th,
 td {
-    border: 1px solid var(--color-ui-text)
+    border: 1px solid var(--color-ui-border)
 }
 
 th.column-header {

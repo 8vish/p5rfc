@@ -110,7 +110,7 @@ export default {
             </tr>
         </thead>
         <tbody>
-            <tr style="display: flex; flex-wrap: wrap; margin: 5px;">
+            <tr>
                 <td class="centered column-inherit"
                     v-for="element in getInheritance(persona)" :key="element">
                     <img class="element-icon inherit-icon" :src="getElementIcon(element)" />

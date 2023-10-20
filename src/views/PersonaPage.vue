@@ -219,5 +219,6 @@ td.column-skill-element {
 
 .skill img {
     min-width: 25px;
+    max-width: 40px;
 }
 </style>

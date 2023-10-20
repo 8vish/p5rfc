@@ -209,13 +209,66 @@ export default {
         </tbody>
     </table>
 </template>
-
 <style scoped>
+    /* Common styles */
+    .centered {
+        text-align: center;
+    }
 
-   #fusion-recipes {
-    min-width: 80%;
-    max-width: 800px;
-   }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    /* Mobile view */
+    @media (max-width: 767px) {
+        td.column-level, td.column-name {
+            padding: 5px;
+        }
+    }
+
+    /* Tablet view */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        th, td {
+            padding: 8px;
+        }
+    }
+
+    /* PC view */
+    @media (min-width: 1024px) {
+        th, td {
+            padding: 12px;
+        }
+    }
+
+    /* Beautiful design */
+    tr.incomplete {
+        background-color: #f5f5f5;
+    }
+
+    tr.dlc {
+        background-color: #ffeeee;
+    }
+
+    tr.max {
+        background-color: #eeffee;
+    }
+
+    tr.treasure {
+        background-color: #eeeeff;
+    }
 
     span.skill-block {
         border: 2px solid var(--color-ui-text);
@@ -223,8 +276,12 @@ export default {
         margin: 3px 0;
         padding: 4px;
         user-select: none;
+        display: inline-block;
     }
-    span.skill-block * { cursor: pointer; }
+
+    span.skill-block * {
+        cursor: pointer;
+    }
 
     input.skill-block-remove {
         visibility: hidden;
@@ -234,16 +291,19 @@ export default {
         cursor: pointer;
         margin: 0 5px;
         width: 1.2rem;
+        vertical-align: middle;
     }
 
     div#skill-search {
-        display: inline-flex;
-        min-width: 100%;
+        display: flex;
+        width: 100%;
+        margin: 2vh 0;
     }
 
     input#skill-search-field {
-        flex: auto;
-        padding: 2px;
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #e0e0e0;
     }
 
     input#skill-search-add {
@@ -251,17 +311,17 @@ export default {
         border: 2px solid var(--color-ui-text);
         color: var(--color-ui-text);
         font-weight: 700;
-        margin: 2px 4px;
-        padding: 3px;
+        margin: 0 4px;
+        padding: 8px 16px;
+        cursor: pointer;
     }
-        
+
     div#skill-list {
-        display: inline-flex;
+        display: flex;
         flex-wrap: wrap;
-        gap: 4px;
-        margin: 2vh 0 0 0;
+        gap: 8px;
+        margin: 2vh 0 0;
         max-width: 100%;
-        width: auto;
     }
 
     .incomplete:not(.max, .treasure) * {
@@ -276,10 +336,16 @@ export default {
         text-decoration: line-through;
     }
 
+    h1#page-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 2vh 0;
+    }
+
     @media (max-width: 1023.98px) {
         td.column-name {
-            font-size: 1.1rem;
-            font-weight: 900;
+            font-size: 18px;
         }
     }
 
@@ -295,18 +361,18 @@ export default {
         }
 
         input#skill-search-add {
-            margin: 2px 5px;
-            padding: 4px;
+            margin: 0 5px;
+            padding: 8px 16px;
         }
-        
+
         div#skill-list {
-            gap: 6px;
-            margin: 2vh 0 0 0;
+            gap: 10px;
+            margin: 2vh 0 0;
         }
 
         span.skill-block {
             margin: 3px 0;
-            padding: 6px;
+            padding: 8px;
         }
 
         td.column-level {

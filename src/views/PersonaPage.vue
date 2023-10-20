@@ -119,6 +119,7 @@ export default {
 </table>
 
 
+
     <table id="persona-skills">
         <thead>
             <tr>
@@ -230,29 +231,12 @@ table#persona-inherits .skill {
 }
 }
 
-/* CSS for large screens (more than one line) */
-@media screen and (min-width: 768px) {
-    #element-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .element-icon {
-        margin: 5px; /* Adjust the margin as needed */
-    }
-}
-
-/* CSS for small screens (one line) */
-@media screen and (max-width: 767px) {
-    #element-container {
-        display: flex;
-        overflow-x: auto;
-    }
-
-    .element-icon {
-        margin: 5px; /* Adjust the margin as needed */
-    }
+#element-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the image size and minimum column width as needed */
+    gap: 10px; /* Adjust the gap between images as needed */
+    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+    margin: 0 auto; /* Center the container on large screens */
 }
 
 </style>

@@ -6,7 +6,7 @@
     --color-ui-header: rgb(60, 24, 219);
     --color-ui-dlc: rgb(182, 79, 79);
     --color-ui-max: rgba(216, 165, 32, 1);
-    --color-ui-treasure: rgb(31, 187, 135,);
+    --color-ui-treasure: rgb(49, 97, 81);
     --color-ui-border: rgba(224, 88, 88, 0.952);
 }
 
@@ -416,8 +416,8 @@ thead {
 
 .treasure,
 .treasure * {
-    background-color: var(--color-ui-treasure);
-    color: var(--color-ui-text)
+    background-color: rgb(49, 97, 81);
+    color: var(--color-ui-background)
 }
 
 .centered {

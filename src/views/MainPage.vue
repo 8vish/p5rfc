@@ -76,8 +76,6 @@ export default {
 <template>
 
     <h1 id="page-title">P5R Fusion Calculator</h1>
-    <figure>
-    Welcome to the Persona 5 Royal Fusion Calculator. Discover the perfect persona combinations quickly and easily. Unleash your persona's full potential!</figure>
     <input id="persona-search" placeholder="Search for a Persona..." type="text" :value="searchQuery"
         @input="event => searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : ''" />
     
@@ -132,8 +130,6 @@ export default {
             </tr>
         </tbody>
     </table>
-    
-    <figcaption>All data structures were ripped directly from chinhodado's fusion calculator: https://github.com/chinhodado/persona5_calculator . Without their compilation of Persona and skill data, this project would have been a lot more of a pain than it was worth.</figcaption>
 </template>
 
 <style>

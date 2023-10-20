@@ -101,6 +101,8 @@ export default {
         </tbody>
     </table>
 
+
+
     <table id="persona-inherits">
     <thead>
         <tr>
@@ -117,6 +119,7 @@ export default {
         </tr>
     </tbody>
 </table>
+
 
 
 
@@ -232,11 +235,15 @@ table#persona-inherits .skill {
 }
 
 #element-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the image size and minimum column width as needed */
-    gap: 10px; /* Adjust the gap between images as needed */
-    max-width: 100%; /* Ensure the container doesn't exceed the screen width */
-    margin: 0 auto; /* Center the container on large screens */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element-icon {
+    width: 45px; /* Set the width to the size of your images */
+    height: 33px; /* Set the height to the size of your images */
+    margin: 5px; /* Adjust the margin as needed */
+    box-sizing: border-box; /* Ensure the margin doesn't exceed the container's width */
 }
 
 </style>

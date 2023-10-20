@@ -111,7 +111,7 @@ export default {
                 :class="{ dlc: persona.dlc, max: persona.max, treasure: persona.treasure }">
                 <td class="column-level centered">{{ persona.level }}</td>
                 <td class="column-arcana centered">{{ persona.arcana }}</td>
-                <td class="column-name" style="width: 100%; color: blue; border-radius: 2px;">
+                <td class="column-name" style="width: 100%; color: rgb(0, 0, 0); border-radius: 2px; background-color: cyan;">
                     <router-link class="persona-redirect"
                         :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }">
                         {{ persona.name }}

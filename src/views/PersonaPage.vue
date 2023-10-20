@@ -239,8 +239,6 @@ table#persona-inherits .skill {
     }
 
     .element-icon {
-        width: 100px; /* Adjust as needed to fit your images */
-        height: 100px; /* Adjust as needed to fit your images */
         margin: 5px; /* Adjust the margin as needed */
     }
 }
@@ -253,8 +251,6 @@ table#persona-inherits .skill {
     }
 
     .element-icon {
-        width: 100px; /* Adjust as needed to fit your images */
-        height: 100px; /* Adjust as needed to fit your images */
         margin: 5px; /* Adjust the margin as needed */
     }
 }

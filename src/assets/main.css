@@ -6,7 +6,7 @@
     --color-ui-header: rgb(60, 24, 219);
     --color-ui-dlc: rgb(182, 79, 79);
     --color-ui-max: rgba(216, 165, 32, 1);
-    --color-ui-treasure: rgb(31, 187, 135)
+    --color-ui-treasure: rgb(31, 187, 135,)
 }
 
 span[data-v-f2c12ba3] {
@@ -260,7 +260,7 @@ td.column-skill-element[data-v-265bb245] {
 }
 
 span.skill-block {
-    border: 2px solid var(--color-ui-text);
+    border: 1px solid var(--color-ui-text);
     cursor: pointer;
     margin: 3px 0;
     padding: 4px;
@@ -293,7 +293,7 @@ input#skill-search-field {
 
 input#skill-search-add {
     background-color: var(--color-ui-background);
-    border: 2px solid var(--color-ui-text);
+    border: 1px solid var(--color-ui-text);
     color: var(--color-ui-text);
     font-weight: 700;
     margin: 2px 4px;
@@ -379,7 +379,7 @@ body {
 }
 
 table {
-    border: 2px solid var(--color-ui-text);
+    border: 1px solid var(--color-ui-text);
     border-collapse: collapse;
     margin: 2vh auto;
     max-width: 100%;

@@ -155,7 +155,7 @@ export default {
 
     <router-link class="centered fuse-redirect redirect-banner" v-if="!persona.treasure"
         :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }">
-        Fuse &gt;&gt;
+        Fuse&gt;&gt;
     </router-link>
 </template>
 
@@ -210,19 +210,4 @@ td.column-skill-element {
         padding: 3px 6px;
     }
 }
-
-@media (max-width: 1023.98px) {
-    table#persona-inherits {
-      display: block;
-    }
-    table#persona-inherits .column-header {
-      display: none;
-    }
-    table#persona-inherits .skill {
-      display: inline-block;
-      text-align: center;
-      margin: 5px;
-      max-width: 43px;
-    }
-  }
 </style>

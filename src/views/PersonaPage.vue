@@ -211,11 +211,6 @@ td.column-skill-element {
     }
 }
 
-.skill {
-    display: inline-block;
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .skill img {
     min-width: 25px;

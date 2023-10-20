@@ -178,3 +178,9 @@ h1#page-title {
         min-width: 200px;
     }
 }
+
+@media (min-width: 800px) {
+    table#fusion-recipes {
+        min-width: 800px;
+    }
+}

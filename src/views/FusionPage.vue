@@ -210,8 +210,7 @@ export default {
     </table>
 </template>
 
-<style scoped>
-
+<style>
     span.skill-block {
         border: 2px solid var(--color-ui-text);
         cursor: pointer;
@@ -219,6 +218,7 @@ export default {
         padding: 4px;
         user-select: none;
     }
+
     span.skill-block * { cursor: pointer; }
 
     input.skill-block-remove {
@@ -249,7 +249,7 @@ export default {
         margin: 2px 4px;
         padding: 3px;
     }
-        
+
     div#skill-list {
         display: inline-flex;
         flex-wrap: wrap;
@@ -293,7 +293,7 @@ export default {
             margin: 2px 5px;
             padding: 4px;
         }
-        
+
         div#skill-list {
             gap: 6px;
             margin: 2vh 0 0 0;

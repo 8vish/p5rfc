@@ -1,13 +1,13 @@
 :root {
-    --color-ui-background: rgba(24, 24, 24, 1);
-    --color-ui-background-faded: rgba(24, 24, 24, .7);
-    --color-ui-text: rgba(205, 205, 205, 1);
+    --color-ui-background: #000000;
+    --color-ui-background-faded: #282828;
+    --color-ui-text: rgb(201, 195, 195);
     --color-ui-header: rgb(195, 230, 225);
     --color-ui-text-faded: rgba(135, 135, 135, .9);
-    --color-ui-header: rgba(225, 225, 225, 1);
-    --color-ui-dlc: rgba(129, 0, 0, 1);
-    --color-ui-max: rgba(216, 165, 32, 1);
-    --color-ui-treasure: rgba(127, 255, 212, 1);
+    --color-ui-header: rgb(175, 196, 240);
+    --color-ui-dlc: rgb(124, 53, 53);
+    --color-ui-max: rgb(177, 153, 91);
+    --color-ui-treasure: rgb(129, 192, 171);
 }
 body {
     background: var(--color-ui-background);

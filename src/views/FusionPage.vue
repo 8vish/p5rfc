@@ -165,7 +165,7 @@ export default {
         <tbody>
             <template v-for="recipe in recipes"
                 :key="(recipe.parents[0] as PersonaData).name + (recipe.parents[1] as PersonaData).name">
-                <tr :class="{ incomplete: !recipe.complete }">
+                <tr :class="{ incomplete: !recipe.complete }" style="border: 2px solid red;">
                     <td :rowspan="1 + getTotalAncestorNumber(recipe)" class="centered column-cost">
                         {{ getRecipeApproxCost(recipe) }}
                     </td>
@@ -258,6 +258,7 @@ export default {
         max-width: 100%;
         width: auto;
     }
+
 
     .incomplete:not(.max, .treasure) * {
         color: var(--color-ui-text-faded);

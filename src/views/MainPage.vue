@@ -80,7 +80,7 @@ export default {
 
     <dlc-filter></dlc-filter>
 
-    <table id="persona-list">
+    <table id="persona-list" style="background-color: rgb(49, 49, 49);">
         <thead>
             <tr>
                 <th class="column-header column-level column-header-sortable"
@@ -114,7 +114,7 @@ export default {
                 <td class="column-name">
                     <router-link class="persona-redirect"
                         :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }"
-                        style="color: #d400ff; font-style: bold;">
+                        style="color: #6f00ff; font-style: bold;">
                         {{ persona.name }}
                     </router-link>
                 </td>

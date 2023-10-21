@@ -164,7 +164,7 @@ export default {
         </thead>
         <tbody>
             <template v-for="recipe in recipes"
-                :key="(recipe.parents[0] as PersonaData).name + (recipe.parents[1] as PersonaData).name">
+                :key="(recipe.parents[0] as PersonaData).name + (recipe.parents[1] as PersonaData).name" style="margin 10px">
                 <tr :class="{ incomplete: !recipe.complete }" style="border: 3px solid rgb(37, 0, 250); margin: 10px;">
                     <td :rowspan="1 + getTotalAncestorNumber(recipe)" class="centered column-cost">
                         {{ getRecipeApproxCost(recipe) }}

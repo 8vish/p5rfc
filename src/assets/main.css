@@ -16,7 +16,7 @@
     /* Light text color */
     --color-ui-header: #3498db;
     /* A color suitable for headers */
-    --color-ui-text-faded: #878787;
+    --color-ui-text-faded: #000000;
     /* Faded text color */
     --color-ui-dlc: rgba(129, 0, 0, 1);
     --color-ui-max: rgba(216, 165, 32, 1);

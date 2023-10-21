@@ -80,7 +80,7 @@ export default {
 
     <dlc-filter></dlc-filter>
 
-    <table id="persona-list" style="background-color: rgb(49, 49, 49);">
+    <table id="persona-list">
         <thead>
             <tr>
                 <th class="column-header column-level column-header-sortable"
@@ -106,7 +106,7 @@ export default {
                 </th>
             </tr>
         </thead>
-        <tbody>
+        <tbody style="background-color: rgb(49, 49, 49);">
             <tr v-for="persona in personas" :key="persona.name"
                 :class="{ dlc: persona.dlc, max: persona.max, treasure: persona.treasure }">
                 <td class="column-level centered">{{ persona.level }}</td>

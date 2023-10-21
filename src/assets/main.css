@@ -12,7 +12,11 @@
 
 
 body {
-    background: var(--color-ui-background);
+    background-image: url('https://images.freecreatives.com/wp-content/uploads/2015/10/moon-images-at-night-dowload.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     color: var(--color-ui-text);
     font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
         Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

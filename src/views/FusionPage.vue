@@ -177,7 +177,7 @@ export default {
                             {{ parent?.currentLevel }}
                             <strong v-if="parent.level !== parent.currentLevel"> (+{{ parent.currentLevel - parent.level }})</strong>
                         </td>
-                        <td class="column-name" style="color: #ff3c00;">
+                        <td class="column-name" style="color: #ffffff;">
                             <router-link v-if="recipe.complete" target="_blank"
                                 :to="{ name: 'Persona', params: { name: serializeName(parent.name) } }">
                                 {{ parent?.name }}
@@ -257,6 +257,10 @@ export default {
         margin: 2vh 0 0 0;
         max-width: 100%;
         width: auto;
+    }
+
+    td .column-name:hover {
+        color: red
     }
 
     .incomplete:not(.max, .treasure) * {

@@ -3,6 +3,7 @@
 * {
     font-family: 'Tilt Neon', sans-serif;
     font-weight: 500;
+    color: #f0f0f0;
 }
 
 :root {
@@ -11,11 +12,11 @@
     /* Dark background color */
     --color-ui-background-faded: #080808;
     /* Slightly lighter background */
-    --color-ui-text: #fffefe;
+    --color-ui-text: #f0f0f0;
     /* Light text color */
     --color-ui-header: #3498db;
     /* A color suitable for headers */
-    --color-ui-text-faded: #000000;
+    --color-ui-text-faded: #878787;
     /* Faded text color */
     --color-ui-dlc: rgba(129, 0, 0, 1);
     --color-ui-max: rgba(216, 165, 32, 1);
@@ -25,11 +26,14 @@
 
 body {
     /*  background-image: url('https://images.freecreatives.com/wp-content/uploads/2015/10/moon-images-at-night-dowload.jpg'); */
+    background-color: #0e0e0e;
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     color: var(--color-ui-text);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+        Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
     line-height: 1.6;
     min-height: 100vh;
@@ -53,7 +57,7 @@ table {
     min-width: 100%;
     padding: 4px;
 }
-/*
+
 th,
 td {
     border: 1px solid var(--color-ui-text);
@@ -68,7 +72,7 @@ thead {
     color: var(--color-ui-background);
     user-select: none;
 }
-*/
+
 .dlc,
 .dlc * {
     background-color: var(--color-ui-dlc);

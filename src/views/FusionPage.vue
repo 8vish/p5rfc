@@ -50,7 +50,7 @@ export default {
     },
     methods: {
         getElementIcon (element: Element): string {
-            return `../assets/icon_${getKeyOfValue(Element, element).toLowerCase()}.png`;
+            return `/assets/icon_${getKeyOfValue(Element, element).toLowerCase()}.png`;
         },
         getTotalAncestorNumber (recipe: FusionRecipe): number {
             return recipe.parents.length;

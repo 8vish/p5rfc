@@ -114,7 +114,7 @@ export default {
                 <td class="column-name">
                     <router-link class="persona-redirect"
                         :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }"
-                        style="color: rgb(80, 105, 173); font-style: bold;">
+                        style="color: rgb(255, 0, 0); font-style: bold;">
                         {{ persona.name }}
                     </router-link>
                 </td>
@@ -123,7 +123,7 @@ export default {
                 <td class="column-fuse">
                     <router-link class="fusion-redirect" v-if="!persona.treasure"
                         :to="{ name: 'Fusion', params: { name: serializeName(persona.name) } }"
-                        style="color: rgb(223, 142, 35);">
+                        style="color: rgb(35, 132, 223);">
                         Fuse<svg class="mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path

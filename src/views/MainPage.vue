@@ -114,7 +114,7 @@ export default {
                 <td class="column-name">
                     <router-link class="persona-redirect"
                         :to="{ name: 'Persona', params: { name: serializeName(persona.name) } }"
-                        style="color: #0400ff; font-style: bold;">
+                        style="color: #d400ff; font-style: bold;">
                         {{ persona.name }}
                     </router-link>
                 </td>

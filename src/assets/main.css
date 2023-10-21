@@ -25,7 +25,8 @@ body {
 }
 
 #app {
-    margin: 0 auto;
+    margin: 0px;
+    padding: 0px;
 }
 
 table {
@@ -34,7 +35,6 @@ table {
     margin: 2vh auto;
     max-width: 100%;
     min-width: 100%;
-    padding: 10px;
 }
 
 th, td {

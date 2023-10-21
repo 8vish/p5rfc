@@ -106,7 +106,7 @@ export default {
                 </th>
             </tr>
         </thead>
-        <tbody style="background-color: rgb(49, 49, 49);">
+        <tbody style="background-color:">
             <tr v-for="persona in personas" :key="persona.name"
                 :class="{ dlc: persona.dlc, max: persona.max, treasure: persona.treasure }">
                 <td class="column-level centered">{{ persona.level }}</td>

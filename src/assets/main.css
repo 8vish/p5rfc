@@ -53,7 +53,7 @@ table {
     min-width: 100%;
     padding: 4px;
 }
-
+/*
 th,
 td {
     border: 1px solid var(--color-ui-text);
@@ -68,7 +68,7 @@ thead {
     color: var(--color-ui-background);
     user-select: none;
 }
-
+*/
 .dlc,
 .dlc * {
     background-color: var(--color-ui-dlc);

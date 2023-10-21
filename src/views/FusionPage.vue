@@ -259,10 +259,6 @@ export default {
         width: auto;
     }
 
-    td .column-name:hover {
-        color: red
-    }
-
     .incomplete:not(.max, .treasure) * {
         color: var(--color-ui-text-faded);
     }

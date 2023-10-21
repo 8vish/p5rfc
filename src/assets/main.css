@@ -7,9 +7,9 @@
 
 :root {
     --font-family: 'Roboto', sans-serif;
-    --color-ui-background: #252525;
+    --color-ui-background: #000000;
     /* Dark background color */
-    --color-ui-background-faded: #1c1c1c;
+    --color-ui-background-faded: #080808;
     /* Slightly lighter background */
     --color-ui-text: #f0f0f0;
     /* Light text color */

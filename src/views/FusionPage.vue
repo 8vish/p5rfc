@@ -177,7 +177,7 @@ export default {
                             {{ parent?.currentLevel }}
                             <strong v-if="parent.level !== parent.currentLevel"> (+{{ parent.currentLevel - parent.level }})</strong>
                         </td>
-                        <td class="column-name" style="color: #5d5fdb;">
+                        <td class="column-name" style="color: #ff3c00;">
                             <router-link v-if="recipe.complete" target="_blank"
                                 :to="{ name: 'Persona', params: { name: serializeName(parent.name) } }">
                                 {{ parent?.name }}

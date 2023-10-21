@@ -80,7 +80,7 @@ export default {
 
     <dlc-filter></dlc-filter>
 
-    <table id="persona-list" style="background-color: rgb(105, 97, 97);">
+    <table id="persona-list">
         <thead>
             <tr>
                 <th class="column-header column-level column-header-sortable"

@@ -1,14 +1,15 @@
 :root {
     --font-family: 'Roboto', sans-serif;
-    --color-ui-background: #0f0f0f;
-    --color-ui-background-faded: #1c1c1c;
-    --color-ui-text: #ccc;
-    --color-ui-header: #afc4f0;
-    --color-ui-text-faded: #878787;
-    --color-ui-dlc: #7c3535;
-    --color-ui-max: #b1995b;
-    --color-ui-treasure: #81c0ab;
+    --color-ui-background: #121212; /* Dark background color */
+    --color-ui-background-faded: #1c1c1c; /* Slightly lighter background */
+    --color-ui-text: #f0f0f0; /* Light text color */
+    --color-ui-header: #3498db; /* A color suitable for headers */
+    --color-ui-text-faded: #878787; /* Faded text color */
+    --color-ui-dlc: #d63031; /* A contrasting color for important elements */
+    --color-ui-max: #f1c40f; /* A contrasting color for another purpose */
+    --color-ui-treasure: #2ecc71; /* A contrasting color for special elements */
 }
+
 
 body {
     background: var(--color-ui-background);

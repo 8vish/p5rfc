@@ -122,7 +122,7 @@ export default {
     <table id="persona-skills">
         <thead>
             <tr>
-                <th class="column-header" colspan="5">Skills</th>
+                <th class="column-header" colspan="5" style="text-align: center; font-weight: 700; color: brown;">Skills</th>
             </tr>
             <tr>
                 <th class="column-header column-skill-level">Level</th>

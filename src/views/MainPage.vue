@@ -102,7 +102,7 @@ export default {
                 <th class="column-stat">Ag</th>
                 <th class="column-stat">Lu</th>
                 <th class="column-affinity" v-for="element in stripUnblockable(elements)" :key="element">
-                    <img class="element-icon" :src="`assets/icon_${element.toLowerCase()}.png`" />
+                    <img class="element-icon" :src="`assets/icon_${element.toLowerCase()}.png`" alt="icons of Affinities" />
                 </th>
             </tr>
         </thead>

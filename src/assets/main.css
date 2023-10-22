@@ -99,10 +99,6 @@ a {
     transition: color var(--transition-duration);
 }
 
-a:hover {
-    color: var(--color-hover);
-}
-
 /* Centered content */
 .centered {
     text-align: center;

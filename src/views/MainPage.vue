@@ -68,7 +68,7 @@ export default {
         },
     },
     mounted() {
-        document.title = `Persona 5 Royal Fusion Calculator| P5RFC`;
+        document.title = `Persona 5 Royal Fusion Calculator | P5RFC`;
     },
 };
 </script>

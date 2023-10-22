@@ -82,7 +82,7 @@ export default {
 
     <table id="persona-list">
         <thead>
-            <tr>
+            <tr style="text-align: center;">
                 <th class="column-header column-level column-header-sortable"
                     :id="'level' === sortBy ? `sorting-${sortReverse ? 'dsc' : 'asc'}` : ''" rowspan="2"
                     @click="sort('level')">Level</th>

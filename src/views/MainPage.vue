@@ -94,6 +94,7 @@ export default {
                     @click="sort('name')">Name</th>
                 <th class="column-header column-stat" colspan="5">Stats</th>
                 <th class="column-header column-affinity" colspan="10">Affinities</th>
+                <th></th>
             </tr>
             <tr>
                 <th class="column-stat">St</th>

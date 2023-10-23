@@ -32,15 +32,28 @@
 <body>
   <div id="app" style="display: block;"></div>
   <script defer type="module" src="/src/main.ts"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1898675567563424"
-    crossorigin="anonymous"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-143Y9D8M0W"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    window.addEventListener('load', function () {
+      var adsbygoogleScript = document.createElement('script');
+      adsbygoogleScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1898675567563424";
+      adsbygoogleScript.async = true;
+      adsbygoogleScript.crossOrigin = "anonymous";
 
-    gtag('config', 'G-143Y9D8M0W');
+      var gtagManagerScript = document.createElement('script');
+      gtagManagerScript.src = "https://www.googletagmanager.com/gtag/js?id=G-143Y9D8M0W";
+      gtagManagerScript.async = true;
+
+      var gtagConfigScript = document.createElement('script');
+      gtagConfigScript.innerHTML = `
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-143Y9D8M0W');
+        `;
+      document.head.appendChild(adsbygoogleScript);
+      document.head.appendChild(gtagManagerScript);
+      document.head.appendChild(gtagConfigScript);
+    });
   </script>
 </body>
 

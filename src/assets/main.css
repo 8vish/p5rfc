@@ -150,6 +150,7 @@ h1#page-title {
 
     #app {
         max-width: 100vw;
+        min-width: 100vw;
     }
 
     img.element-icon {

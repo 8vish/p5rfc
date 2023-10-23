@@ -54,7 +54,7 @@ export default {
 
     <table id="persona-stats">
         <thead>
-            <tr>
+            <tr style="text-align: center;">
                 <th class="column-header column-level" rowspan="2">Level</th>
                 <th class="column-header column-arcana" rowspan="2">Arcana</th>
                 <th class="column-header" colspan="5">Stats</th>

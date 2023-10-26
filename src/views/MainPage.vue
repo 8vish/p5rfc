@@ -72,14 +72,14 @@ export default {
     },
 };
 </script>
-
+<header>
 <template style="min-width: 90%;">
     <h1 id="page-title">P5R Fusion Calculator</h1>
     <input id="persona-search" placeholder="Search for a Persona..." type="text" :value="searchQuery"
         @input="event => searchQuery = event.target ? (event.target as HTMLTextAreaElement).value : ''" />
-
-    <dlc-filter></dlc-filter>
-
+</header>
+<dlc-filter></dlc-filter>
+<main>
     <table id="persona-list">
         <thead>
             <tr style="text-align: center;">
@@ -132,7 +132,7 @@ export default {
         </tbody>
     </table>
 </template>
-
+    </main>
 <style></style>
 
 <style scoped>
@@ -177,4 +177,5 @@ input#persona-search {
     template {
         min-width: 90vh;
     }
-}</style>
+}
+</style>

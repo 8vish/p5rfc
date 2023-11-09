@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /persona/
-Disallow: /fusion/
-Allow: /  # Allow crawling of the rest of the site
+Allow: /
 
 Sitemap: https://p5rfc.com/sitemap.xml
